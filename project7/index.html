@@ -6,6 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <button></button>
+    <button id="changeColor">Click me</button>
+    <p id="colorcode"></p>
+    <script>
+        document.getElementById("changeColor").addEventListener("click", 
+        function() {
+            document.body.style.backgroundColor ="#" + Math.floor(Math.random()*16777215).toString(16);
+            document.getElementById("colorcode").innerText = "#"+ Math.floor(Math.random()*16777215).toString(16);
+
+        });
+    </script>
 </body>
 </html>
